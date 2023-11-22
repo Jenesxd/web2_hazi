@@ -7,6 +7,9 @@
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
+CREATE DATABASE IF NOT EXISTS `web2_hazi` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `web2_hazi`;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -26,6 +29,7 @@ SET time_zone = "+00:00";
 --
 -- Tábla szerkezet ehhez a táblához `lelekszam_csv`
 --
+
 
 CREATE TABLE `lelekszam_csv` (
   `varosid` int(3) DEFAULT NULL,
