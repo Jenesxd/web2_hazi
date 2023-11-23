@@ -41,12 +41,12 @@ function evek() {
     if (varosid != 0) {
         $.post(
             "lekerdezes.inc.php",
-            {"op" : "nev", "id" : varosid},
+            {"op" : "lelekszam", "id" : varosid},
             function(data) {
                 $("#evselect").html('<option value="0">Válasszon ...</option>');
                 var lista = data.lista;
                 for(i=0; i<lista.length; i++)
-                    $("#evselect").append('<option value="'+lista[i].id+'">'+lista[i].nev+'</option>');
+                    $("#evselect").append('<option value="'+lista[i].id+'">'+lista[i].ev+'</option>');
             },
             "json"                                                    
         );
@@ -55,13 +55,15 @@ function evek() {
 
 function ev() {
     $(".adat").html("");
-    var evid = $("#evselect").val();
-    if (evid != 0) {
+    var varosid = $("#evselect").val();
+    
+    if (varosid != 0) {
         $.post(
             "lekerdezes.inc.php",
-            {"op" : "info", "id" : evid},
+            {"op" : "info", "id" : varosid},
             function(data) {
                 $("#ev").text(data.ev);
+                $("#no").text(data.no);
                 $("#osszesen").text(data.osszesen);
             },
             "json"                                                    

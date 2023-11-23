@@ -13,12 +13,12 @@
     #intezmenyinfo {
       float: right;
       border: 1px solid black;
-      width: 190px;
+      width: 230px;
       height: 100px;
     }
     .cimke{
       display: inline-block;
-      width: 60px;
+      width: 100px;
       text-align: right;
     }
     span {
@@ -36,8 +36,13 @@
   </head>
   <body>
     <h1>Városok Lakossága:</h1>
-
-    <div id='sel'>
+    <div id = 'informaciosdiv'>
+      <div id = 'intezmenyinfo'>
+        <span class="cimke">Év:</span><span id="ev" class="adat"></span><br>
+        <span class="cimke">Nőtt:</span><span id="no" class="adat"></span><br>
+        <span class="cimke">Összesen:</span><span id="osszesen" class="adat"></span><br>
+        
+      </div>
       <label for='megyecimke'>Megye:</label>
       <select id = 'megyekselect'></select>
       <br><br>
@@ -46,15 +51,6 @@
       <br><br>
       <label for = 'evcimke'>Év:</label>
       <select id = 'evselect'></select>
-      </div>
-
-    <div id = 'informaciosdiv'>
-      <div id = 'ev'>
-        <span class="cimke">Megye:</span><span id="nev" class="adat"></span><br>
-        <span class="cimke">Város:</span><span id="varos" class="adat"></span><br>
-        <span class="cimke">Év:</span><span id="ev" class="adat"></span><br>
-        <span class="cimke">Lakosság:</span><span id="osszesen" class="adat"></span><br>
-      </div>
     </div>
 </div>
   </body>

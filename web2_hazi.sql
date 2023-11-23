@@ -36,7 +36,7 @@ CREATE TABLE `lelekszam_csv` (
   `ev` int(4) DEFAULT NULL,
   `no` int(6) DEFAULT NULL,
   `osszesen` int(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- A tábla adatainak kiíratása `lelekszam_csv`
@@ -6368,7 +6368,8 @@ INSERT INTO `menu` (`menu_url`, `menu_title`, `menu_parent`, `menu_permission`, 
 ('lekerdezes', 'Lekérdezés', '', '011', 90),
 ('signin', 'Bejelentkezés', '', '100', 60),
 ('signout', 'Kijelentkezés', '', '011', 80),
-('signup', 'Regisztráció', '', '100', 70);
+('signup', 'Regisztráció', '', '100', 70),
+('pdfmaker','TCPDF','','111',100);
 
 -- --------------------------------------------------------
 
