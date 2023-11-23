@@ -1,9 +1,15 @@
 <?php
-class Api
+class Api_controller
 {
     private $pdo;
     private $model;
+    public $baseName = "api";
 
+    public function main(array $vars)
+    {
+        include(SERVER_ROOT . 'views/api_view.php');
+
+    }
     public function __construct()
     {
         $this->pdo = new PDO('mysql:host=localhost;dbname=your_database_name', 'your_username', 'your_password');
