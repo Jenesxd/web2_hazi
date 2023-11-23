@@ -4,6 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', "On");
 
 require_once(SERVER_ROOT . 'tcpdf/tcpdf.php');
+require_once('models/Pdfquery_model.php');
+require_once('models/mypdf.php');
 
 
 class Pdfquery_controller {
@@ -52,7 +54,7 @@ class Pdfquery_controller {
 				$pdf->setLanguageArray($l);
 			}
 
-			$pdf->SetFont('helvetica', 'B', 10);
+			$pdf->SetFont('PDFAHelvetica', 'B', 10);
 
 			// add a page
 			$pdf->AddPage();

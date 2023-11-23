@@ -10,9 +10,9 @@ class Pdfquery_model {
 		$this->megyeMindegy = $vars['megye_jog'] == 'mindegy';
 		if ($this->megyeMindegy) {
 			$this->sqlSelect =
-				"SELECT megye.nev as megye, varos.nev as varos, lelekszam_csv.ev as mikor, lelekszam_csv.osszesen as lelekszam, varos1.megyeijogu as megyejog
+				"SELECT megye.nev as megye, varos1.nev as varos, lelekszam_csv.ev as mikor, lelekszam_csv.osszesen as lelekszam, varos1.megyeijogu as megyejog
 FROM megye 
-INNER JOIN varos1 on megye.id = varos.megyeid 
+INNER JOIN varos1 on megye.id = varos1.megyeid 
 INNER JOIN lelekszam_csv on varos1.id = lelekszam_csv.varosid
 WHERE lelekszam_csv.osszesen >= :minlel and lelekszam_csv.osszesen <= :maxlel 
   and lelekszam_csv.ev >= :minev and lelekszam_csv.ev <= :maxev";
