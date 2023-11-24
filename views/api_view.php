@@ -23,7 +23,6 @@
                 url: '/web2_hazi/lelekszam_csv', 
                 type: 'POST',
                 data: data,
-                
                 success: function(response) {
                     console.log(response);
                 },
